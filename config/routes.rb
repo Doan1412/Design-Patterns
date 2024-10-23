@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   get 'build_gaming_computer', to: 'computers#build_gaming_computer'
+  resources :users, only: %i(new create show)
+  resources :articles, only: %i(index)
 end
